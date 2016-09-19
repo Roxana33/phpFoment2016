@@ -5,10 +5,12 @@ $counter=0;
 while(!feof($myfile)) {
 	$a = fgets($myfile);
 	$counter++;	
-if (strpos("$a", "Vector")== TRUE) {
+/*if (strpos("$a", "Vector")== TRUE) {
 echo "Está encontrado ";
-echo "La linea $counter ";
-}
+echo "La linea  $counter ";
+}*/
+str_word_count($myfile, " ");
+
 }
  
 
