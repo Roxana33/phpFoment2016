@@ -16,6 +16,7 @@ class CabeceraPagina {
   public function graficar()
   {
     echo '<div class="w3-'$ubicacion'"'.$this->ubicacion.'">';
+    
     echo $this->titulo;
     echo '</div>';
   }
