@@ -1,55 +1,54 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Pruebas</title>
+	<title></title>
 </head>
 <body>
 <?php
-abstract class Operacion {
-  protected $valor1;
-  protected $valor2;
-  protected $resultado;
-  public function cargar1($v)
-  {
-    $this->valor1=$v;
-  }
-  public function cargar2($v)
-  {
-    $this->valor2=$v;
-  }
-  public function imprimirResultado()
-  {
-    echo $this->resultado.'<br>';
-  }
-  public abstract function operar();
+abstract class Trabajador{
+	protected $nombre;
+	protected $sueldo;
+	public function __construct($nombre){
+		$this->nombre=$nombre;
+	}
+	public abstract function calcularSueldo();
+	public function imprimir{
+		$this->nombre;
+	}
 }
-
-class Suma extends Operacion{
-  public function operar()
-  {
-    $this->resultado=$this->valor1+$this->valor2;
-  }
+class Empleado extends Trabajador{
+	private $horasTrabajadas;
+	private $valorHora;
+	public function __construct($nombre,$horasTrabajadas,$valorHora){
+		parent::__construct($nombre);
+		$this->horasTrabajadas=$horasTrabajadas;
+		$this->valorHora=$valorHora;
+	}
+	public function calcularSueldo{
+		echo $this->valorHora * $this->horasTrabajadas;
+	}
 }
-
-class Resta extends Operacion{
-  public function operar()
-  {
-    $this->resultado=$this->valor1-$this->valor2;
-  }
+	public function imprimir{
+		echo $this->nombre. ' '.$this->sueldo. ''.$this->horasTrabajadas. ''.$this->valorHora;
 }
-
-$suma=new Suma();
-$suma->cargar1(10);
-$suma->cargar2(10);
-$suma->operar();
-echo 'El resultado de la suma de 10+10 es:';
-$suma->imprimirResultado();
-
-$resta=new Resta();
-$resta->cargar1(10);
-$resta->cargar2(5);
-$resta->operar();
-echo 'El resultado de la diferencia de 10-5 es:';
-$resta->imprimirResultado();
+class Gerente extends Trabajador{
+	private $garancias;
+	public function __construct($garancias, $nombre){
+		$this->garancias=$garancias;
+		parent::_construct;
+		}
+	public function cargarSueldo2{
+		echo $this->10*$this->garancias;
+	}
+	public function imprimir{
+		echo 'Tu sueldo es :'.$this->10*$this->garancias;
+	}
+}
+$empl=new Empleado();
+$empl->calcularSueldo('Nicolasa', 3.50, 160);
+$empl->imprimir();
+$gerente=new Gerente('Bebe', );
+$gerente=imprimir();
 ?>
 </body>
 </html>
