@@ -23,7 +23,7 @@
  	<p>Nombre</p>
  	<p>Tipo</p>
  	<p>Ubicacion</p>
- 	<p>Codigo</p>
+ 	<p>NIF</p>
 
 	</div>
 	</div>
